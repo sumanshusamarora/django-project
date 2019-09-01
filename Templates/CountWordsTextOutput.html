@@ -6,7 +6,10 @@
 <h1> Word Count Frequency: </h1>
 
 {% for word, counttotal in SortedWordDict %}
-  <br/>
   {{word}} - {{counttotal}}
-  
+  <br/>
 {% endfor %}
+
+</br>
+</br>
+<a href="{% url 'WordCounterInput' %}"> Start with new text </a> </p> <a href="{% url 'home' %}"> Home </a>
