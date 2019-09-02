@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from . import views, settings
 from django.conf.urls.static import static
+import jobs.views
 
 
 urlpatterns = [
-    path('', views.homepage),
-    path('homepage/', views.homepage, name="home"),
+    path('', jobs.views.home),
+    path('UploadPicture/', jobs.views.uploadpicture, name="UploadPicture"),
+    path('home/', jobs.views.home, name="home"),
     path('aboutpage/', views.aboutpage, name="about"),
     path('WordCounterInput', views.WordCounterInput, name="WordCounterInput"),
     path('WordCounterOutput', views.WordCounterOutput, name="WordCounterOutput"),
