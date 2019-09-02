@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from . import views
+from . import views, settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('', views.homepage),
@@ -24,4 +26,4 @@ urlpatterns = [
     path('WordCounterInput', views.WordCounterInput, name="WordCounterInput"),
     path('WordCounterOutput', views.WordCounterOutput, name="WordCounterOutput"),
     path('admin/', admin.site.urls, name="admin"),
-]
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
