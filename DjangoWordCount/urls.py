@@ -18,11 +18,12 @@ from django.urls import path, include
 from . import views, settings
 from django.conf.urls.static import static
 import jobs.views
+import RSVP.views
 
 urlpatterns = [
     path('', jobs.views.home),
     path('UploadPicture/', jobs.views.InputImageEntry, name="UploadPicture"),
-    #path('InputImageEntry/', jobs.views.InputImageEntry, name="InputImageEntry"),
+    path('RSVPFamily/', RSVP.views.InputRSVPFamily, name="RSVPFamily"),
     path('home/', jobs.views.home, name="home"),
     path('aboutpage/', views.aboutpage, name="about"),
     path('WordCounterInput', views.WordCounterInput, name="WordCounterInput"),

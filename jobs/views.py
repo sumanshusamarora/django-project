@@ -3,10 +3,10 @@ from .models import Job
 from django.http import HttpResponseRedirect
 from .forms import ImageUpload
 from django.contrib import auth
-from django.core.files.storage import FileSystemStorage
 
 def home(request):
-	jobobjects = Job.objects
+	jobobjects = Job.objects.all().order_by('-id')
+
 	return render(request, 'jobs/home.html', {'jobobjects':jobobjects})
 
 def uploadpicture(request):
