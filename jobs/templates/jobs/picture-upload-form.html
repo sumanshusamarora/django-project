@@ -39,6 +39,9 @@
     <div class="container">
   <div class="py-5 text-center">
     <img class="d-block mx-auto mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <h1 style="color:blue; font-size:300%;" ><em>Abeer will cherish these memories when he grows up and comes back to this page </em>😀</h1>
+  </br>
+  </br>
     <h2>Picture Upoad</h2>
     <p class="lead">Select picture from your computer's directory and click upload.</p>
   </div>
@@ -49,9 +52,9 @@
    <form method="POST" enctype="multipart/form-data">
    	  {% csrf_token %}
       <table>
-  		  {{ form.as_p}}
-  		  <button type="submit" class="btn btn-primary mb-2">Upload</button>
+  		  {{ form.as_table}}
       </table>
+      <button type="submit" class="btn btn-primary mb-2">Upload</button>
 	</form> 
 
     </div>
