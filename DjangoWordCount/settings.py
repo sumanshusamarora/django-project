@@ -129,3 +129,9 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
+
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_HOST_USER = 'postmaster@mail.sumanshuarora.com'
+EMAIL_HOST_PASSWORD = 'f1e317f5229ee662761235c17cd2ef42-4167c382-99aaa02b'
+EMAIL_SUBJECT_PREFIX = ''
+EMAIL_USE_LOCALTIME = True
