@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-import password
+import secret
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'DjangoWordCount.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dsaglobal',
-        'USER': 'django-admin',
-        'PASSWORD': 'Django@131241',
+        'NAME': secret.db_Name,
+        'USER': secret.db_user,
+        'PASSWORD': secret.db_pwd,
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on,
         'PORT':3306
     }
@@ -133,6 +133,6 @@ MEDIA_URL = '/media/'
 
 EMAIL_HOST = 'smtp.mailgun.org'
 EMAIL_HOST_USER = 'abeer@mail.sumanshuarora.com'
-EMAIL_HOST_PASSWORD = password.pwd
+EMAIL_HOST_PASSWORD = secret.pwd
 EMAIL_SUBJECT_PREFIX = ''
 EMAIL_USE_LOCALTIME = True
